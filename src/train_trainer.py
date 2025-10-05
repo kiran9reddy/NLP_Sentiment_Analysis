@@ -1,12 +1,11 @@
 import os
-os.environ["WANDB_DISABLED"] = "true"   # 🚀 Disable Weights & Biases
-
-
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 from datasets import load_dataset
 import numpy as np
 from sklearn.metrics import accuracy_score, f1_score
+
+os.environ["WANDB_DISABLED"] = "true"   # 🚀 Disable Weights & Biases
 
 MODEL_NAME = "distilbert-base-uncased"
 NUM_LABELS = 2
