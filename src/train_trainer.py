@@ -1,3 +1,7 @@
+import os
+os.environ["WANDB_DISABLED"] = "true"   # 🚀 Disable Weights & Biases
+
+
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 from datasets import load_dataset
