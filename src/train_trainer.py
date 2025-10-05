@@ -25,16 +25,19 @@ def compute_metrics(eval_pred):
     f1 = f1_score(labels, preds)
     return {"accuracy": acc, "f1": f1}
 
+# Define training arguments
 training_args = TrainingArguments(
     output_dir="./results",
-    evaluation_strategy="epoch",
-    learning_rate=2e-5,
+    num_train_epochs=3,
     per_device_train_batch_size=16,
     per_device_eval_batch_size=16,
-    num_train_epochs=2,
+    warmup_steps=500,
     weight_decay=0.01,
-    save_total_limit=1,
-    logging_dir='./logs',
+    logging_dir="./logs",
+    logging_steps=10,
+    eval_strategy="epoch",  # Corrected argument name
+    save_strategy="epoch", # Corrected argument name
+    load_best_model_at_last_checkpoint=True, # Corrected argument name
 )
 
 trainer = Trainer(
