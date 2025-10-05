@@ -8,18 +8,15 @@ This project demonstrates **fine-tuning DistilBERT** for **binary sentiment clas
 
 
 NLP_Sentiment_Analysis/
-│
 ├── notebooks/
-│ └── sentiment_demo.ipynb # Demo notebook for inference and evaluation
-│
+│   └── sentiment_demo.ipynb       # Demo notebook for inference and evaluation
 ├── src/
-│ ├── train_trainer.py # Training using HuggingFace Trainer
-│ ├── train_manual.py # Training using custom training loop
-│ ├── predict.py # Prediction / inference script
-│ └── model/ # Folder to save trained model
-│
-├── README.md # Project overview
-└── requirements.txt # Dependencies
+│   ├── train_trainer.py           # Training using HuggingFace Trainer
+│   ├── train_manual.py            # Training using custom training loop
+│   ├── predict.py                 # Prediction / inference script
+│   └── model/                     # Folder to save trained model
+├── README.md                      # Project overview
+└── requirements.txt               # Dependencies
 
 
 
